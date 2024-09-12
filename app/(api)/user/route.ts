@@ -10,5 +10,9 @@ export const GET = async () => {
   );
   const user = await response.json();
 
-  return NextResponse.json({ user, date: new Date().toISOString() });
+  return NextResponse.json({
+    name: "this is an update",
+    user,
+    date: new Date().toISOString(),
+  });
 };
